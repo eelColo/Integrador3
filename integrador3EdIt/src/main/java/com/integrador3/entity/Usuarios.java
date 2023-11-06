@@ -10,6 +10,7 @@ import jakarta.persistence.Table;
 
 //Entidad de usuario
 @Entity
+
 @Table(name = "consultausuario")
 public class Usuarios {
 	
@@ -19,8 +20,8 @@ public class Usuarios {
 	private Integer id;
 	@Column(name="nombre")
 	private String nombre;
-	@Column(name="nombreAlumno")
-	private String nombreAlumno;
+	@Column(name="nombre_alumno")
+	private String nombre_alumno;
 	@Column(name= "email")
 	private String email;
 	@Column(name="telefono")
@@ -41,12 +42,12 @@ public class Usuarios {
 	
 	
 
-	public Usuarios(Integer id, String nombre, String nombreAlumno, String email, Integer telefono, String turno,
+	public Usuarios(Integer id, String nombre, String nombre_alumno, String email, Integer telefono, String turno,
 			String mensaje) {
 		super();
 		this.id = id;
 		this.nombre = nombre;
-		this.nombreAlumno = nombreAlumno;
+		this.nombre_alumno = nombre_alumno;
 		this.email = email;
 		this.telefono = telefono;
 		this.turno = turno;
@@ -70,11 +71,11 @@ public class Usuarios {
 	}
 
 	public String getNombreAlumno() {
-		return nombreAlumno;
+		return nombre_alumno;
 	}
 
-	public void setNombreAlumno(String nombreAlumno) {
-		this.nombreAlumno = nombreAlumno;
+	public void setNombreAlumno(String nombre_alumno) {
+		this.nombre_alumno = nombre_alumno;
 	}
 
 	public String getEmail() {
@@ -111,7 +112,7 @@ public class Usuarios {
 
 	@Override
 	public String toString() {
-		return "Usuarios [id=" + id + ", nombre=" + nombre + ", nombreAlumno=" + nombreAlumno + ", email=" + email
+		return "Usuarios [id=" + id + ", nombre=" + nombre + ", nombreAlumno=" + nombre_alumno + ", email=" + email
 				+ ", telefono=" + telefono + ", turno=" + turno + ", mensaje=" + mensaje + "]";
 	}
 	

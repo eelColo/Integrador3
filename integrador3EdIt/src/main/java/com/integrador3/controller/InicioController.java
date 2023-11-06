@@ -4,6 +4,7 @@ package com.integrador3.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 
 
@@ -14,13 +15,12 @@ public class InicioController {
 	public static final String VISTA_INDEX = "index";
 	public static final String VISTA_ACTIVIDADES = "actividades";
 	public static final String VISTA_COLABORAR = "colaborar";
-	
 	public static final String VISTA_PROYECTO = "proyecto";
 	
 	
 	
 	
-	@GetMapping("index")
+	@GetMapping("/index")
 	public String mostrarIndex() {
 		return VISTA_INDEX;
 	}
@@ -31,10 +31,7 @@ public class InicioController {
 	@GetMapping("colaborar")
 	public String vistaColaborar() {
 		return VISTA_COLABORAR;
-	}
-	
-	
-	
+	}	
 	@GetMapping("proyecto")
 	public String vistaProyecto() {
 		return VISTA_PROYECTO;
