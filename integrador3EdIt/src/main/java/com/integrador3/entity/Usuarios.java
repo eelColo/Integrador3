@@ -10,19 +10,19 @@ import jakarta.persistence.Table;
 
 //Entidad de usuario
 @Entity
-@Table(name = "consultaUsuario")
+@Table(name = "consultausuario")
 public class Usuarios {
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name="id")
 	private Integer id;
 	@Column(name="nombre")
 	private String nombre;
 	@Column(name="nombreAlumno")
 	private String nombreAlumno;
-	@Column(name= "mail")
-	private String mail;
+	@Column(name= "email")
+	private String email;
 	@Column(name="telefono")
 	private Integer telefono;
 	@Column(name="turno")
@@ -41,13 +41,13 @@ public class Usuarios {
 	
 	
 
-	public Usuarios(Integer id, String nombre, String nombreAlumno, String mail, Integer telefono, String turno,
+	public Usuarios(Integer id, String nombre, String nombreAlumno, String email, Integer telefono, String turno,
 			String mensaje) {
 		super();
 		this.id = id;
 		this.nombre = nombre;
 		this.nombreAlumno = nombreAlumno;
-		this.mail = mail;
+		this.email = email;
 		this.telefono = telefono;
 		this.turno = turno;
 		this.mensaje = mensaje;
@@ -77,12 +77,12 @@ public class Usuarios {
 		this.nombreAlumno = nombreAlumno;
 	}
 
-	public String getMail() {
-		return mail;
+	public String getEmail() {
+		return email;
 	}
 
-	public void setMail(String mail) {
-		this.mail = mail;
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
 	public Integer getTelefono() {
@@ -111,7 +111,7 @@ public class Usuarios {
 
 	@Override
 	public String toString() {
-		return "Usuarios [id=" + id + ", nombre=" + nombre + ", nombreAlumno=" + nombreAlumno + ", mail=" + mail
+		return "Usuarios [id=" + id + ", nombre=" + nombre + ", nombreAlumno=" + nombreAlumno + ", email=" + email
 				+ ", telefono=" + telefono + ", turno=" + turno + ", mensaje=" + mensaje + "]";
 	}
 	

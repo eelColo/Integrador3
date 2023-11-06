@@ -94,43 +94,43 @@
                             <img class="img-fluid d-none d-md-block" src="imgs/gc.png" alt="">
                         </div>
                     </div>
-                    <form>
+                    <form action="#" th:action="@{agregar}" th:object="${usuarios}" method="POST">
                         <div class="mb-3">
                             <label for="nombre" class="form-label">Nombre</label>
-                            <input type="text" class="form-control" id="nombre" placeholder="Nombre y apellido madre/padre/tutor">
+                            <input  type="text" class="form-control" id="nombre" placeholder="Nombre y apellido madre/padre/tutor" th:field="*{nombre}" value="{nombre}">
                         </div>
 
                         <div class="mb-3">
                             <label for="nombreA" class="form-label">Nombre del Alumno</label>
-                            <input type="text" name="nombreA" id="nombreA" class="form-control" placeholder="Nombre Alumno">
+                            <input  type="text" name="nombreA" id="nombreA" class="form-control" placeholder="Nombre Alumno" th:field="*{nombreAlumno}">
                         </div>
 
                         <div class="mb-3">
                             <label for="email" class="form-label">Email</label>
-                            <input type="email" name="email" id="email" placeholder="Email*" class="form-control">
+                            <input  type="email" name="email" id="email" placeholder="Email*" class="form-control" th:field="*{email}">
                         </div>
                         
                         <div class="mb-3">
                             <label for="num" class="form-label">Numero teléfonico</label>
-                            <input type="email" name="num" id="num"  class="form-control">
+                            <input  type="text" name="num" id="num"  class="form-control" th:field="*{telefono}">
                         </div>
 
                         <div class="mb-3">
                             <label for="turno">Turno</label>
-                            <select class="form-select" id="turno">
-                                <option selected>Turno</option>
-                                <option value="1">Mañana</option>
-                                <option value="2">Tarde</option>
+                            <select  class="form-select" id="turno" th:field="*{turno}">
+                                <option selected value="0">Turno</option>
+                                <option value="Mañana">Mañana</option>
+                                <option value="Tarde">Tarde</option>
                             </select>
                         </div>
 
                         <div class="mb-3">
                             <label for="mensaje" class="form-label">Deja tu mensaje</label>
-                            <textarea class="form-control" name="mensaje" id="mensaje" rows="3" ></textarea>
+                            <textarea  class="form-control" name="mensaje" id="mensaje" rows="3" th:field="*{mensaje}"></textarea>
                         </div>
 
                         <button type="submit" class="btn btn-success mb-4">Enviar</button>
-
+		                <div th:text="${mensaje}"> </div>                   
                     </form>
                 </div>
             </div>
