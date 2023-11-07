@@ -87,16 +87,16 @@
                         <table class="table"> 
                             <thead>
                                 <tr>
-                                    <th scope="col"></th>
-                                    <th scope="col">Alumno</th>
-                                    <th scope="col">Turno</th>
+                                    <th class="table-light" scope="col"></th>
+                                    <th class="table-light" scope="col">Alumno</th>
+                                    <th class="table-light" scope="col">Turno</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr th:each="usuario: ${usuario}">
-                                    <td th:text="${usuario.id}"></th>
-                                    <td th:text="${usuario.nombre}"></td>
-                                    <td th:text="${usuario.turno}"></td>
+                                <tr class="table-light"th:each="usuario: ${usuario}">
+                                    <td class="table-light"th:text="${usuario.id}"></th>
+                                    <td class="table-light"th:text="${usuario.nombre}"></td>
+                                    <td class="table-light"th:text="${usuario.turno}"></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -112,6 +112,8 @@
                             <img class="img-fluid d-none d-md-block" src="imgs/gc.png" alt="">
                         </div>
                     </div>
+
+
                     <form action="#" th:action="@{agregar}" th:object="${usuarios}" method="POST">
                         <div class="mb-3">
                             <label for="nombre" class="form-label">Nombre</label>
@@ -164,23 +166,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!--footer con informacion-->
 <footer>
     <div class="row container-fluid p-5">
@@ -197,27 +182,7 @@
             
         </div>
 
-        <!--Form-->
-        <div class="col-6">
-            <form>
-                <div class="mb-3">
-                    <label class="form-label" for="nombre">Nombre</label>
-                    <input type="text" class="form-control" id="nombre" required>
-                </div>
-                <div class="mb-3">
-                    <label class="form-label" for="email">Email</label>
-                    <input type="email" class="form-control" required id="email" placeholder="email@mail.com">
-                </div>
-                <div class="mb-3">
-                    <label class="form-label" for="com">Mensaje</label>
-                    <input style="height: 100px;" type="text" class="form-control" id="com" required>
-                </div>
-                <div>
-                    <button type="submit" class="btn btn-primary">Enviar</button>
-                </div>
-
-            </form>
-        </div>
+        
 
         <!--Imagen al final-->
     </div>
